@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="78.9965mm" height="78.9965mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3117 3117"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M3117 1558c0,860 -698,1558 -1558,1558 -860,0 -1558,-698 -1558,-1558 0,-860 698,-1558 1558,-1558 860,0 1558,698 1558,1558zm-200 0c0,-749 -608,-1357 -1357,-1357 -749,0 -1357,608 -1357,1357 0,749 608,1357 1357,1357 749,0 1357,-608 1357,-1357l0 0z"/>
+  <circle class="fil0" cx="1561" cy="782" r="282"/>
+  <circle class="fil0" cx="889" cy="1168" r="283"/>
+  <circle class="fil0" cx="2234" cy="1170" r="283"/>
+  <circle class="fil0" cx="886" cy="1948" r="285"/>
+  <circle class="fil0" cx="2234" cy="1948" r="282"/>
+  <circle class="fil0" cx="1561" cy="2336" r="283"/>
+ </g>
+</svg>
