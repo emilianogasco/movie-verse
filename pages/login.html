@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="autohrs" content="Naty Aguirre, Matías Rossi, Leandro Cudmani, Emiliano Gasco, Bautista Arias, Martina San Román, Dana Diaz">
+    <meta name="description" content="">
+    <meta name="keywords" content="Peliculas, Series, Videos, Entretenimiento, Suspenso, Diversion">
+    <link rel="shortcut icon" href="../src/img/logo/logo-movie-verse-2.svg" type="image/x-svg">
+    <title>Movie Verse</title>
+    <!--  css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--  css de iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--  css proyecto -->
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+    <head></head>
+    <main>
+ <div class="container-fluid">
+  <div class="row justify-content-center p-5">
+    <form class="col-12 col-md-6 col-lg-4" onsubmit="userAuth(event)">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <div class="form-floating mb-3">
+        <input type="userEmail" class="form-control" id="userEmail" placeholder="nombre@ejemplo.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <label for="floatingPassword"></label>
+        <div class="input-group mb-3">
+          <span class="input-group-text"  onclick="showPassword()">
+            <i class="bi bi-eye-slash-fill" id="iconPassClosed"></i>
+            <i class="bi bi-eye" id="iconPassOpen"></i>
+          </span>
+          <input type="password" id="userPass" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+        </div>
+      </div>
+  
+      <div class="form-check text-start my-3">
+        <input class="form-check-input" type="checkbox" value="remember-me" id="checkBox">
+        <label class="form-check-label" for="checkBox">
+          Remember me
+        </label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    </form>
+  </div>
+ </div>
+
+    <!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- script del proyecto -->
+    <script src="../app/login.js"></script>
+  </body>
+</html>
