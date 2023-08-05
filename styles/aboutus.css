@@ -1,47 +1,96 @@
-.person {
-  position: relative;
-  background-color: whitesmoke;
-  border-radius: 5px;
-  border: 1px solid black;
-  transition: all 1s;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.person:hover {
-  transition: all 600ms;  transform: translateY(-10px);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
-}
-
-.person:hover .social-icons {
+.container-fluid {
+  position: absolute;
+  width: 700px;
+  top: 60px;
+  left: calc(50% - 300px);
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
-.person img {
-  border-radius: 50%;
-}
-
-.person h2{
+.cf2 {
+  position: absolute;
+  width: 700px;
+  top: 400px;
+  left: calc(50% - 300px);
   display: flex;
-  margin-top: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  justify-content: center;
 }
 
-.person p {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 30px;
-  font-weight: 700;
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -30px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 90px;
+  transition: 0.3s;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 260px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgb(142, 228, 3) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 70%, rgba(255, 0, 0, 1) 100%);
+;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 160px;
+  transition: 0.4s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
 }
 
 .social-icons {
-  display: none;
   padding: 10px;
 }
 
@@ -75,13 +124,15 @@
 }
 
 .lista  li:nth-child(1) a:hover .bi{
-  color: #00aeff;
+  color: #a3a3a3;
 }
 
 .lista  li:nth-child(2) a:hover .bi{
-  color: #0041cc;
+  color: #0077b5;
 }
 
 .lista  li:nth-child(3) a:hover .bi{
   color:  #dc2743
 }
+
+
