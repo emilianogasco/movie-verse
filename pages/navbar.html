@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="autohrs" content="Naty Aguirre, Matías Rossi, Leandro Cudmani, Emiliano Gasco, Bautista Arias, Martina San Román, Dana Diaz">
+    <meta name="description" content="">
+    <meta name="keywords" content="Peliculas, Series, Videos, Entretenimiento, Suspenso, Diversion">
+    <link rel="shortcut icon" href="../src/img/logo/logo-movie-verse-2.svg" type="image/x-svg">
+    <title>Movie Verse</title>
+    <!--  css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--  css de iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--  css proyecto -->
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <img class="logo" src="../src/img/logo/logo-movie-verse.svg" alt="logo">
+          <a class="nav-link active me-4 fs-5 logoNav" aria-current="page" href="#">Movie verse</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navtext mt-3" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div class="container d-flex justify-content-start">
+                  <img class="iconos" src="../src/img/logo/home.png" alt="home">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a> 
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="container d-flex">
+                  <img class="iconos" src="../src/img/logo/account.png" alt="login">
+                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
+                  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
+                          <img class="logoModal" src="../src/img/logo/logo-movie-verse.svg" alt="logo">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="d-flex flex-column align-items-center">
+                            <label for="usuario">Ingrese su usuario</label>
+                            <input class="mb-3" type="text"  id="usuario">
+                            <label for="password">Ingrese su contraseña</label>
+                            <input class="mb-3" type="password" id="password">
+                          </form>
+                          <p>Todavia no estas registrado?</p>
+                          <a href="http://">Registrate</a>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary">Ingresar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li> 
+              <li class="nav-item">
+                <div class="container d-flex">
+                  <img class="iconos" src="../src/img/logo/movies.png" alt="register">
+                  <a class="nav-link" href="#">Peliculas</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="container d-flex">
+                  <img class="iconos" src="../src/img/logo/series.png" alt="register">
+                  <a class="nav-link" href="#">Series</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li class="nav-item">
+              <img class="marcas"  src="../src/img/marcas/Marvel.svg" alt="marvel">
+                </li>
+                <li class="nav-item">
+                  <img class="marcas" src="../src/img/marcas/DC-Comics-Logo-PNG-Photos.png" alt="marvel">
+                </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Ingresa tu peli/serie" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- script del proyecto -->
+    <script src="./app/app.js"></script>
+  </body>
+</html>
