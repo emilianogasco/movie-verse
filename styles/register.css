@@ -1,0 +1,22 @@
+* { margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url(../src/img/backgroun-image/background-cine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+.background-color-form {
+    background-color: white;
+
+}
+
+.border-form {
+    border-radius: 1rem;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.941) ;
+}
+
