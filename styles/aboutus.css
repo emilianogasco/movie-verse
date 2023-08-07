@@ -1,10 +1,15 @@
+body {
+  background: #757F9A;
+  background: linear-gradient(90deg, #010918 30%, #757F9A 100%);
+}
+
 .person {
   position: relative;
-  background-color: whitesmoke;
+  width: 18rem;
+  background-color: rgb(233, 229, 229);
   border-radius: 5px;
   border: 1px solid black;
   transition: all 1s;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +25,8 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .person img {
@@ -41,8 +48,12 @@
 }
 
 .social-icons {
-  display: none;
-  padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: 0.5s ease, 0.5s ease;
 }
 
 .lista{
@@ -64,7 +75,7 @@
   text-decoration: none;
 }
 
-.lista  li a .bi{
+.lista  li a .bi {
   display:block;
   background: linear-gradient(0deg, #fff, #d5d4d4);
   border-radius: 50%;
@@ -74,14 +85,29 @@
   transition: .5s;
 }
 
-.lista  li:nth-child(1) a:hover .bi{
-  color: #00aeff;
+.lista  li:nth-child(1) a:hover .bi {
+  color: #7c7c7c;
 }
 
-.lista  li:nth-child(2) a:hover .bi{
-  color: #0041cc;
+.lista  li:nth-child(2) a:hover .bi {
+  color: #0077b5;
 }
 
-.lista  li:nth-child(3) a:hover .bi{
+.lista  li:nth-child(3) a:hover .bi {
   color:  #dc2743
+}
+
+@media (max-width: 767px) {
+  .social-icons {
+    opacity: 1;
+  }
+  .lista  li:nth-child(1) a .bi {
+    color: #7c7c7c;
+  }
+  .lista  li:nth-child(2) a .bi {
+    color: #0077b5;
+  }
+  .lista  li:nth-child(3) a .bi {
+    color:  #dc2743
+  }
 }
