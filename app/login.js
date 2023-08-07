@@ -3,16 +3,15 @@ const showPassword = () => {
  const openIcon = document.getElementById('iconPassOpen');
  const userPassword = document.getElementById('userPass');
 
-openIcon.style.display = 'none';
-
+    
 
  if (userPassword.type === 'password') {
     userPassword.type = 'text';
-    openIcon.style.display = 'inline-block';
-    closeIcon.style.display = 'none';
+    openIcon.classList.add('d-none');
+    closeIcon.classList.remove('d-none');
 } else {
     userPassword.type = 'password';
-    openIcon.style.display = 'none';
-    closeIcon.style.display = 'inline-block';
+    openIcon.classList.remove('d-none');
+    closeIcon.classList.add('d-none');
 }
 };
