@@ -1,0 +1,61 @@
+.bgpeli {
+
+    background-image: url(../src/img/pelis/Interstellar-1920x1080.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+   
+
+.letraIndex{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    
+}
+
+.descPeli{
+    width: 20vw;
+    font-size: 12px;
+}
+.title {
+    text-align: center;
+    margin: 100px;
+    
+}   
+
+.seccionPelis{
+    
+}
+
+.separador{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-img-top{
+    border-radius: 15px;
+    box-shadow: 0px 0px 24px 7px rgba(0,0,0,0.3);
+    
+
+}
+
+.card-img-top:hover{
+
+    height: 220px;
+    width: 300px;
+    transition: 600ms;
+}
+
+.item{
+    width: 190px;
+
+}
+
+.item:hover{
+    width:210px;
+    transition: 600ms;
+}
