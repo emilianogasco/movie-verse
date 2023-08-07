@@ -1,97 +1,58 @@
-.container-fluid {
-  position: absolute;
-  width: 700px;
-  top: 60px;
-  left: calc(50% - 300px);
-  display: flex;
-  justify-content: center;
+body {
+  background: #757F9A;
+  background: linear-gradient(90deg, #010918 30%, #757F9A 100%);
 }
 
-.cf2 {
-  position: absolute;
-  width: 700px;
-  top: 400px;
-  left: calc(50% - 300px);
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  display: flex;
-  height: 280px;
-  width: 200px;
-  background-color: #17141d;
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-  transition: 0.4s ease-out;
-  left: 0px;
-}
-
-.card:not(:first-child) {
-  margin-left: -30px;
-}
-
-.card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
-}
-
-.card:hover ~ .card {
+.person {
   position: relative;
-  left: 90px;
-  transition: 0.3s;
+  background-color: rgb(233, 229, 229);
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.title {
-  color: white;
-  font-weight: 300;
-  position: absolute;
-  left: 30px;
-  top: 15px;
+.person:hover {
+  transition: all 600ms;  transform: translateY(-10px);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
 }
 
-.bar {
-  position: absolute;
-  top: 260px;
-  left: 20px;
-  height: 5px;
-  width: 150px;
+.person:hover .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.emptybar {
-  background-color: #2e3033;
-  width: 100%;
-  height: 100%;
+.person img {
+  border-radius: 50%;
 }
 
-.filledbar {
-  position: absolute;
-  top: 0px;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgb(142, 228, 3) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 70%, rgba(255, 0, 0, 1) 100%);
-;
-  transition: 0.6s ease-out;
+.person h2{
+  display: flex;
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-.card:hover .filledbar {
-  width: 160px;
-  transition: 0.4s ease-out;
-}
-
-svg {
-  fill: #17141d;
-  stroke-width: 2px;
-}
-
-.card:hover .stroke {
-  stroke-dashoffset: 100;
-  transition: 0.6s ease-out;
+.person p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .social-icons {
-  padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: 0.5s ease, 0.5s ease;
 }
 
 .lista{
@@ -113,7 +74,7 @@ svg {
   text-decoration: none;
 }
 
-.lista  li a .bi{
+.lista  li a .bi {
   display:block;
   background: linear-gradient(0deg, #fff, #d5d4d4);
   border-radius: 50%;
@@ -123,16 +84,20 @@ svg {
   transition: .5s;
 }
 
-.lista  li:nth-child(1) a:hover .bi{
-  color: #a3a3a3;
+.lista  li:nth-child(1) a:hover .bi {
+  color: #7c7c7c;
 }
 
-.lista  li:nth-child(2) a:hover .bi{
+.lista  li:nth-child(2) a:hover .bi {
   color: #0077b5;
 }
 
-.lista  li:nth-child(3) a:hover .bi{
+.lista  li:nth-child(3) a:hover .bi {
   color:  #dc2743
 }
 
-
+@media (max-width: 767px) {
+  .lista {
+    opacity: 1;
+  }
+}

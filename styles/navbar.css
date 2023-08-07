@@ -1,0 +1,50 @@
+.logo {
+    width: 45px;
+    height: 35px;
+    margin-right: 15px;
+}
+.marcas{
+
+width: 55px;
+height: 50px;
+}
+
+.iconos{
+    width: 15px;
+    height: 15px;
+    margin-top: 12px;
+}
+
+.movie {
+    height: 80px;
+    width: 100px;
+}
+
+nav {
+    border: 2px solid black;
+    height: 60px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    }
+
+.logoNav{
+    font-weight: bolder;
+}
+
+
+.logoModal {
+    height: 50px;
+    width: 80px;
+    margin-left: 30px;
+}
+
+@media (min-width: 840px) {
+    .navtext{
+        margin-left: 22vw;
+        margin-bottom: 14px;
+    }
+    .marcas{
+
+        margin-right: 20px;
+        }
+
+} 
