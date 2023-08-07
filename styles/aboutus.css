@@ -5,6 +5,7 @@ body {
 
 .person {
   position: relative;
+  width: 18rem;
   background-color: rgb(233, 229, 229);
   border-radius: 5px;
   border: 1px solid black;
@@ -97,7 +98,16 @@ body {
 }
 
 @media (max-width: 767px) {
-  .lista {
+  .social-icons {
     opacity: 1;
+  }
+  .lista  li:nth-child(1) a .bi {
+    color: #7c7c7c;
+  }
+  .lista  li:nth-child(2) a .bi {
+    color: #0077b5;
+  }
+  .lista  li:nth-child(3) a .bi {
+    color:  #dc2743
   }
 }
