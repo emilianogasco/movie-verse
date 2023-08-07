@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="autohrs" content="Naty Aguirre, Matías Rossi, Leandro Cudmani, Emiliano Gasco, Bautista Arias, Martina San Román, Dana Diaz">
+    <meta name="description" content="">
+    <meta name="keywords" content="Peliculas, Series, Videos, Entretenimiento, Suspenso, Diversion">
+    <link rel="shortcut icon" href="../src/img/logo/logo-movie-verse-2.svg" type="image/x-svg">
+    <title>Movie Verse</title>
+    <!--  css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--  css de iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--  css proyecto -->
+    <link rel="stylesheet" href="../styles/register.css">
+  </head>
+  <body>
+    <head></head>
+    <main>
+      <section class="container-fluid">
+          <div class="d-flex justify-content-center align-items-center ">
+            <form class="border background-color-form border-form col-12 col-md-6 col-lg-4 mt-5" onsubmit="createUser(event)">
+  
+              <div class="container-fluid  d-flex justify-content-between align-items-center mt-3">CREA TU CUENTA
+                <img class="logo" height="60px" src="../src/img/logo/logo-movie-verse.svg" alt="logo-movie-verse">
+              </div>
+  
+              <div class="m-3 border-top">
+                <label for="name" class="form-label mt-4">Nombre</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+    
+              <div class="m-3">
+                <label for="lastname" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="lastname">
+              </div>
+  
+              <div class="m-3">
+                <label for="email" class="form-label">Correo electronico</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+  
+              <div class="m-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+    
+              <div class="m-3">
+                <label for="repeatpassword" class="form-label">Repetir Contraseña</label>
+                <input type="password" class="form-control" id="repeatpassword">
+              </div>
+  
+              <div class="m-3 form-check">
+                <input type="checkbox" id="form-check-input">
+                <label for="checkbox" class="form-check-label">Aceptar terminos y condiciones</label>
+              </div>
+    
+              <button type="submit" class="btn btn-primary m-3">Registrate</button>
+    
+            </form>
+
+          </div>
+          
+      </section>
+    </main>
+
+    <!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- script del proyecto -->
+    <script src="../app/register.js"></script>
+  </body>
+</html>
