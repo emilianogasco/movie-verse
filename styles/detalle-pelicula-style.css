@@ -1,0 +1,19 @@
+.bgpeli {
+background-image:url(../src/img/pelis/transformers_2880x1800_xtrafondos.com.jpg) ;
+background-position: center;
+background-size: cover;
+height: 400px;
+letter-spacing: 0.5px;
+font-family: 'Alegreya Sans SC', sans-serif;
+color: white;
+}
+.informacion {
+color: rgb(107, 107, 112);
+}
+.description {
+    width: 20vw;
+    font-size: 12px;
+    text-align:start;
+    color:rgb(255, 255, 255);
+}
+ 
