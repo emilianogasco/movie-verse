@@ -1,37 +1,43 @@
 const createUser = (event) => {
 event.preventDefault();
-const userName = document.getElementById('name').value.toLowerCase();
-const userLastName = document.getElementById('lastname').value.toLowerCase();
-const userEmail = document.getElementById('email').value;
-const userPassword = document.getElementById('password').value.toLowerCase();
+
+const newUser = {
+    name: document.getElementById('name').value.toLowerCase(),
+    lastName: document.getElementById('lastname').value.toLowerCase(),
+    password: document.getElementById('password').value,
+    email: document.getElementById('email').value,
+    };
+
+
 const userRepeatPassword = document.getElementById('repeatpassword').value;
 const conditions = document.getElementById('form-check-input').checked;
+
 
 const PasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-if (userName.length < 3) {
+if (newUser.name.length < 3) {
     alert('debe ingresar un nombre valido');
     return;
 }
 
-if (userLastName.length < 3) {
+if (newUser.lastName.length < 3) {
     alert('debe ingresar un apellido valido');
     return;
 }
 
-if (!emailRegex.test(userEmail)) {
+if (!emailRegex.test(newUser.email)) {
     alert('Debe ingresar un email valido');
     return;
 }
 
-if (!PasswordRegex.test(userPassword)) {
+if (!PasswordRegex.test(newUser.password)) {
     alert('Debe ingresar un password valido');
     return;
 }
 
-if (userPassword !== userRepeatPassword) {
+if (newUser.password !== userRepeatPassword) {
     alert('Las contraseñas no coinciden');
     return;
 }
@@ -41,14 +47,24 @@ if (!conditions) {
     return;
 }
 
-const newUser = {
-name: userName,
-lastName: userLastName,
-password: userPassword,
-email: userEmail,
-};
+const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-localStorage.setItem('user', JSON.stringify(newUser));
+const userAlreadyExist = storedUsers.find((user) => {
+    return user.email === newUser.email
+});
+
+const users = storedUsers;
+
+if (userAlreadyExist) {
+    alert('Ya existe un usuario creado con este email. Por favor ingresa uno diferente');
+    return;
+} else {
+    users.push(newUser)
+}
+
+
+
+localStorage.setItem('users', JSON.stringify(users));
 
 window.location.href = 'http...'
 
