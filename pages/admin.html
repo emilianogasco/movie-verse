@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="autohrs" content="Naty Aguirre, Matías Rossi, Leandro Cudmani, Emiliano Gasco, Bautista Arias, Martina San Román, Dana Diaz">
+    <meta name="description" content="">
+    <meta name="keywords" content="Peliculas, Series, Videos, Entretenimiento, Suspenso, Diversion">
+    <link rel="shortcut icon" href="../src/img/logo/logo-movie-verse-2.svg" type="image/x-svg">
+    <title>Movie Verse</title>
+    <!--  css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--  css de iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--  css proyecto -->
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="container">
+        <div class="display-3 text-center">Lista de Peliculas y Series</div>
+        <!-- Button trigger modal -->
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-sm btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Agregar <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Pelicula o Serie</h1>
+              </div>
+              <form onsubmit="createPyS(event)" id="form-pys">
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="Titulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Titulo de la Pelicula / Serie" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="tipo" class="form-label">Pelicula o Serie</label>
+                    <select class="form-select" id="tipo">
+                      <option value="0" selected>Seleccione un tipo</option>
+                      <option value="1">Pelicula</option>
+                      <option value="2">Serie</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select class="form-select" id="categoria" >
+                      <option value="0" selected>Seleccione una categoria</option>
+                      <option value="Accion">Acción</option>
+                      <option value="Aventura">Aventura</option>
+                      <option value="CienciaFiccion">Ciencia Ficción</option>
+                      <option value="Comedia">Comedia</option>
+                      <option value="Drama">Drama</option>
+                      <option value="Fantasia">Fantasía</option>
+                      <option value="Romance">Romance</option>
+                      <option value="Terror">Terror</option>
+                      <option value="Suspenso">Suspenso</option>
+                      <option value="Animacion">Animación</option>
+                      <option value="Documental">Documental</option>
+                      <option value="Crimen">Crimen</option>
+                      <option value="Musical">Musical</option>
+                      <option value="Misterio">Misterio</option>
+                      <option value="Western">Western</option>
+                      <option value="Superheroes">Superhéroes</option>
+                      <option value="Familia">Familia</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripcion</label>
+                    <textarea class="form-control" placeholder="Agregar una descripcion" id="descripcion" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="publicado" class="form-label">Descripcion</label>
+                    <input class="form-check-input" type="checkbox" value="" id="publicado">
+                  </div>
+                  <div class="mb-3">
+                    <div class="mensaje"></div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar-modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Agregar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+      <section class="table-s">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Pelicula y Serie</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Editar / Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Dark</td>
+              <td>Serie</td>
+              <td>Drama</td>
+              <td>La desaparición de dos niños muestra los vínculos entre cuatro familias y expone el pasado de una pequeña ciudad.</td>
+              <td>
+                <div class="form-check d-flex justify-content-center aling-items-center">
+                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="btn btn-sm btn-secondary"> <i class="bi bi-pencil-fill"></i></div>
+                <div class="btn btn-sm btn-danger"> <i class="bi bi-trash-fill"></i></div>
+              </td>
+            </tr>
+       
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+
+    </main>
+
+    <!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- script del proyecto -->
+    <script src="../app/admin.js"></script>
+  </body>
+</html>
