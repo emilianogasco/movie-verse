@@ -9,6 +9,7 @@ function cleanError() {
 }
 // funcion para borrar agregado
 function cleanSuccess() {
+  //incremento del id de peliculas y series
   idPyS++
   mensaje.innerHTML='';
   document.getElementById('form-pys').reset();
@@ -29,9 +30,10 @@ const createPyS = (event) =>{
     categoria : document.getElementById('categoria').value,
     descripcion : document.getElementById('descripcion').value,
     publicado : document.getElementById('publicado').checked,
+    img: 'src/img/peli/ted.jpg'
   };
 
-  //consulta si selecciono algun tipo de pelicula o serie
+  // consulta si selecciono algun tipo de pelicula o serie
   if(newPyS.tipo == 0){
     mensaje.innerHTML= `<div class='alert alert-danger mt-3' role='alert'>Debe seleccionar si es pelicula o serie</div>`
     setTimeout(cleanError,3000);
