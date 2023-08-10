@@ -27,111 +27,37 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <img class="logo" src="./src/img/logo/logo-movie-verse.svg" alt="logo">
-          <a class="nav-link active me-4 fs-5 logoNav" aria-current="page" href="#">Movie verse</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse navtext mt-3" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <div class="container d-flex justify-content-start">
-                  <img class="iconos" src="./src/img/logo/home.png" alt="home">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a> 
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/account.png" alt="login">
-                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
-                  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
-                          <img class="logoModal" src="./src/img/logo/logo-movie-verse.svg" alt="logo">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <form class="d-flex flex-column align-items-center">
-                            <label for="usuario">Ingrese su usuario</label>
-                            <input class="mb-3" type="text"  id="usuario">
-                            <label for="password">Ingrese su contraseña</label>
-                            <input class="mb-3" type="password" id="password">
-                          </form>
-                          <p>Todavia no estas registrado?</p>
-                          <a href="http://">Registrate</a>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                          <button type="button" class="btn btn-primary">Ingresar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li> 
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/movies.png" alt="register">
-                  <a class="nav-link" href="#">Peliculas</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/series.png" alt="register">
-                  <a class="nav-link" href="#">Series</a>
-                </div>
-              </li>
-            </ul>
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li class="nav-item">
-              <img class="marcas"  src="../src/img/marcas/Marvel.svg" alt="marvel">
-                </li>
-                <li class="nav-item">
-                  <img class="marcas" src="../src/img/marcas/DC-Comics-Logo-PNG-Photos.png" alt="marvel">
-                </li>
-            </ul>
-
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Ingresa tu peli/serie" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+      
     </header>
 
     <main>
       <section>
-        <div class="bgpeli d-flex flex-column  justify-content-end">
+        <div class="bgpeli d-flex flex-column justify-content-end">
           <div class="m-3">
-            <h4 class="mb-3">Interestellar</h4>
+            <h4 class="mb-3 tituloPeli">Interestellar</h4>
             <div class="descPeli">
-              <h7 class="mb-3 ">Cuando la Tierra se vuelve inhabitable en el futuro, un granjero y ex piloto de la NASA, Joseph Cooper, tiene la tarea de pilotar una nave espacial, junto con un equipo de investigadores, para encontrar un nuevo planeta para los humanos.</h7>
+              <h7 class="mb-3 ">La trama sigue al ex-piloto de la NASA y granjero Cooper en un futuro distópico donde la Tierra está al borde del colapso debido a la escasez de alimentos y cambios climáticos extremos.</h7>
 
             </div>
             <div class="mt-3">
-              <button class="btn btn-primary">Reproducir :)</button>
+              <button class="btn btn-primary botonReproducir">Reproducir :)</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="letraIndex">
-        <div class="separador" >
-          <img class="marcas mt-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="">
+      <section>
+        <div class="separador container" >
+          <img class="marcas mt-3 mx-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="">
           <h2 class="mt-4 titulo">Hecha un vistaso a todas nuestras pelis!</h2>
           
         </div>
-        <div class="seccionPelis ">
-          <div class="container ">
+        <div class="seccionPelis">
+          <div class="container">
             <h5 class="mt-4 ms-3 text-start fw-bold">Comedia</h5>
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="owl-carousel owl-theme">
                     <div class="item m-3">
-                      <img src="./src/img/pelis/como si fuera la primera vez.jpeg" alt="" class="card-img-top" height="200px">  
+                      <img src="./src/img/pelis/como si fuera la primera vez.jpeg" alt="" class="card-img-top imgCarousel" height="200px">  
                     </div>
                     <div class="item m-3">
                         <img src="./src/img/pelis/deadpool2.jpg" alt="" class="card-img-top" height="200px" width="80px">  

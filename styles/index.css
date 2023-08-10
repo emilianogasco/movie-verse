@@ -1,3 +1,7 @@
+*{
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+}
 .bgpeli {
 
     background-image: url(../src/img/pelis/Interstellar-1920x1080.jpg);
@@ -6,27 +10,29 @@
     background-repeat: no-repeat;
     height: 300px;
     color: white;
-    font-family: 'Alegreya Sans SC', sans-serif;
-}
-   
-
-.letraIndex{
-    font-family: 'Alegreya Sans SC', sans-serif;
     
 }
 
+@media (max-width: 600px) {
+
+    .descPeli, .tituloPeli{
+        display: none;
+    }
+
+    .bgpeli{
+        justify-content: start;
+        height: 200px;
+    }
+    
+    .botonReproducir {
+        width: 95px;
+        font-size: 12px;
+    }
+    
+}
 .descPeli{
     width: 20vw;
     font-size: 12px;
-}
-.title {
-    text-align: center;
-    margin: 100px;
-    
-}   
-
-.seccionPelis{
-    
 }
 
 .separador{

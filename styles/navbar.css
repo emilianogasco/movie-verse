@@ -24,7 +24,10 @@ nav {
     border: 2px solid black;
     height: 60px;
     font-family: 'Alegreya Sans SC', sans-serif;
-    }
+    background-image:url(../src/img/backgroun-image/gris.jpg);
+    background-size: contain;
+
+}
 
 .logoNav{
     font-weight: bolder;
