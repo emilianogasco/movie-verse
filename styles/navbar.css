@@ -12,7 +12,7 @@ height: 50px;
 .iconos{
     width: 15px;
     height: 15px;
-    margin-top: 9px;
+    
 }
 
 .movie {
@@ -31,15 +31,52 @@ nav {
 }
 
 
-.logoModal {
-    height: 50px;
-    width: 80px;
-    margin-left: 30px;
+
+
+@media (max-width: 1024px) {
+    .navText{
+        margin-top: 15px;
+    }
+}
+
+
+.buscadorNav {
+
+    width: 400px;
+    border: 3px solid black;
+    border-radius: 15px;
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color: ghostwhite;
+    
+
+}
+
+.imagenesBuscador {
+    width: 30%;
+}
+.titulosBuscador {
+    width: 70%;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    .buscadorNav {
+        width: 300px;
+        max-height: 300px;
+    }
+    
 }
 
 @media (min-width: 1024px) {
-    .navtext{
-        margin-left: 22vw;
-        margin-bottom: 14px;
+
+    .buscadorNav{
+        position: absolute;
+        right: 28px;
+        top: 57px;
+        max-width: 300px;
     }
+    
 }
+
