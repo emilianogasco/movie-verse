@@ -37,14 +37,9 @@ nav {
     margin-left: 30px;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1024px) {
     .navtext{
         margin-left: 22vw;
         margin-bottom: 14px;
     }
-    .marcas{
-
-        margin-right: 20px;
-        }
-
-} 
+}
