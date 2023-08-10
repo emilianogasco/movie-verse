@@ -3,27 +3,28 @@ const bdpys = [
   {
     "id":0 ,
     "titulo" :"Dark" ,
-    "tipo" : 2 ,
-    "categoria" : 2,
+    "tipo" : "pelicula" ,
+    "categoria" : "accion",
     "descripcion" : "esto es una descricion",
-    "publicado" : 'checked' 
+    "publicado" : "checked" 
   },
   {
     "id":1 ,
-    "titulo" :"Dark2" ,
-    "tipo" : 1 ,
-    "categoria" : 4,
-    "descripcion" : "esto es una descripcion",
-    "publicado" : 'checked' 
+    "titulo" :"Dark 2" ,
+    "tipo" : "serie" ,
+    "categoria" : "accion",
+    "descripcion" : "esto es una descricion",
+    "publicado" : "checked" 
   },
   {
     "id":2 ,
-    "titulo" :"Dark3" ,
-    "tipo" : 1 ,
-    "categoria" : 4,
-    "descripcion" : "esto es una descripcion",
-    "publicado" :  ''
-  }
+    "titulo" :"Dark 3" ,
+    "tipo" : "pelicula" ,
+    "categoria" : "accion",
+    "descripcion" : "esto es una descricion",
+    "publicado" : "" 
+  },
+
 ]
 
 //cargo la base de datos
