@@ -6,7 +6,7 @@ const bdpys = [
     "tipo" : 2 ,
     "categoria" : 2,
     "descripcion" : "esto es una descricion",
-    "publicado" : false 
+    "publicado" : 'checked' 
   },
   {
     "id":1 ,
@@ -14,7 +14,7 @@ const bdpys = [
     "tipo" : 1 ,
     "categoria" : 4,
     "descripcion" : "esto es una descripcion",
-    "publicado" : true 
+    "publicado" : 'checked' 
   },
   {
     "id":2 ,
@@ -22,15 +22,51 @@ const bdpys = [
     "tipo" : 1 ,
     "categoria" : 4,
     "descripcion" : "esto es una descripcion",
-    "publicado" : true 
+    "publicado" :  ''
   }
 ]
 
 //cargo la base de datos
 localStorage.setItem('PyS', JSON.stringify(bdpys))
 
-//tranformo la bd en un JSON y lo almacena en la varible
+//tranformo la bd en un JSON y lo almacena en la varible por las dudas si no existe crea un array vacio
 const storedPyS = JSON.parse(localStorage.getItem ('PyS')) || [];
+
+//obtengo el id tabla
+const tabla = document.getElementById('tabla');
+//funcion para obtener la tabla
+function obtenerTablaPyS(){
+  storedPyS.forEach((pys) => {
+    const id = pys.id;
+    const titulo = pys.titulo;
+    const tipo = pys.tipo;
+    const categoria = pys.categoria;
+    const descripcion = pys.descripcion;
+    const publicado = pys.publicado;
+    tabla.innerHTML+=`
+      <tr>
+        <th scope="row">${id}</th>
+        <td>${titulo}</td>
+        <td>${tipo}</td>
+        <td>${categoria}</td>
+        <td>${descripcion}</td>
+        <td>
+          <div class="form-check d-flex justify-content-center aling-items-center">
+          <input class="form-check-input" type="checkbox" ${publicado} id="flexCheckDefault">
+          </div>
+        </td>
+        <td>
+          <div class="btn btn-sm btn-secondary"> <i class="bi bi-pencil-fill"></i></div>
+          <div class="btn btn-sm btn-danger"> <i class="bi bi-trash-fill"></i></div>
+        </td>
+      </tr>
+    
+    `
+      
+  });
+}
+//muestro la tabla
+obtenerTablaPyS();
 
 // id de peliculas y series
 let idPyS = storedPyS.length;
@@ -48,15 +84,17 @@ function cleanSuccess() {
   mensaje.innerHTML='';
   document.getElementById('form-pys').reset();
   document.getElementById('cerrar-modal').click();
+  tabla.innerHTML='';
+  obtenerTablaPyS()
 }
 
 // funcion submit del formulario
 const createPyS = (event) =>{
  
-  // // evitar el refresco de la pagina
+  // evitar el refresco de la pagina
   event.preventDefault();
 
-  // // objeto de peliculas y series
+  // objeto de peliculas y series
   let newPyS = {
     id: idPyS,
     titulo :  document.getElementById('titulo').value,
@@ -66,18 +104,23 @@ const createPyS = (event) =>{
     publicado : document.getElementById('publicado').checked,
   };
 
-  // // consulta si selecciono algun tipo de pelicula o serie
+  // consulta si selecciono algun tipo de pelicula o serie
   if(newPyS.tipo == 0){
     mensaje.innerHTML= `<div class='alert alert-danger mt-3' role='alert'>Debe seleccionar si es pelicula o serie</div>`
     setTimeout(cleanError,3000);
     return;
   }
 
-  // //consulta si selecciono alguna categoria
+  //consulta si selecciono alguna categoria
   if(newPyS.categoria == 0){
     mensaje.innerHTML= `<div class='alert alert-danger mt-3' role='alert'>Debe seleccionar una categoria</div>`
     setTimeout(cleanError,3000);
     return;
+  }
+
+  //cambio el valor de true por checked
+  if(newPyS.publicado == true){
+    newPyS.publicado = 'checked'
   }
 
   //hace la comparativa de si existe el id o no
@@ -98,5 +141,8 @@ const createPyS = (event) =>{
   // // muestra un mensaje que dice que se agrego la clave
   mensaje.innerHTML=  `<div class='alert alert-success mt-3' role='alert'>Se agrego correctamente</div>`
 
-  setTimeout(cleanSuccess, 3000);
+  setTimeout(cleanSuccess, 2000);
 }
+
+
+
