@@ -57,8 +57,8 @@ function obtenerTablaPyS(){
           </div>
         </td>
         <td>
-          <div class="btn btn-sm btn-secondary"> <i class="bi bi-pencil-fill"></i></div>
-          <div class="btn btn-sm btn-danger"> <i class="bi bi-trash-fill"></i></div>
+          <div class="btn btn-sm btn-secondary" > <i class="bi bi-pencil-fill"></i></div>
+          <div class="btn btn-sm btn-danger" onclick="confirm('realemnte quiere elimiar esta pelicula?')"> <i class="bi bi-trash-fill"></i></div>
         </td>
       </tr>
     
@@ -69,8 +69,6 @@ function obtenerTablaPyS(){
 //muestro la tabla
 obtenerTablaPyS();
 
-// id de peliculas y series
-let idPyS = storedPyS.length;
 // selector de mensaje
 let mensaje = document.querySelector('.mensaje');
 
@@ -97,7 +95,7 @@ const createPyS = (event) =>{
 
   // objeto de peliculas y series
   let newPyS = {
-    id: idPyS,
+    id: idPyS = storedPyS.length,
     titulo :  document.getElementById('titulo').value,
     tipo : document.getElementById('tipo').value,
     categoria : document.getElementById('categoria').value,
@@ -123,13 +121,6 @@ const createPyS = (event) =>{
   if(newPyS.publicado == true){
     newPyS.publicado = 'checked'
   }
-
-  //hace la comparativa de si existe el id o no
-  storedPyS.find((pys) =>{
-    if(pys.id === newPyS.id){
-      newPyS.id = storedPyS.length;
-    }
-  });
 
   //crea una variable que equivale al storedPyS
    const PyS = storedPyS;
