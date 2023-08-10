@@ -78,8 +78,6 @@ function cleanError() {
 }
 // funcion para borrar agregado
 function cleanSuccess() {
-  // //incremento del id de peliculas y series
-  idPyS = storedPyS.length;
   mensaje.innerHTML='';
   document.getElementById('form-pys').reset();
   document.getElementById('cerrar-modal').click();
