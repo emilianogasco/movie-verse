@@ -21,9 +21,11 @@ height: 50px;
 }
 
 nav {
-    border: 2px solid black;
+    
     height: 60px;
     font-family: 'Alegreya Sans SC', sans-serif;
+    background-image: url(../src/img/backgroun-image/gris.jpg);
+    background-size: contain;
     }
 
 .logoNav{
@@ -43,7 +45,6 @@ nav {
 .buscadorNav {
 
     width: 400px;
-    border: 3px solid black;
     border-radius: 15px;
     max-height: 500px;
     overflow-y: scroll;
@@ -52,8 +53,14 @@ nav {
 
 }
 
+.peliBuscador{
+   
+}
+
 .imagenesBuscador {
     width: 30%;
+    height: 30%;
+    border-radius: 8px;
 }
 .titulosBuscador {
     width: 70%;
