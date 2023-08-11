@@ -1,39 +1,34 @@
+/* Logo izquierdo navbar */
+
 .logo {
     width: 45px;
     height: 35px;
     margin-right: 15px;
 }
-.marcas{
 
-width: 55px;
-height: 50px;
+.tituloNav{
+    font-weight: bolder;
 }
 
+/* Iconos del navbar */
 .iconos{
     width: 15px;
     height: 15px;
     
 }
 
-.movie {
-    height: 80px;
-    width: 100px;
-}
+/* Estilo del Nav: tamaño, letra y fondo */
 
 nav {
     
     height: 60px;
     font-family: 'Alegreya Sans SC', sans-serif;
-    background-image: url(../src/img/backgroun-image/gris.jpg);
-    background-size: contain;
+    background-image: url(../src/img/backgroun-image/stress.jpg);
+    background-size: cover;
     }
 
-.logoNav{
-    font-weight: bolder;
-}
 
-
-
+/* Media para la posicion de las secciones  */
 
 @media (max-width: 1024px) {
     .navText{
@@ -42,6 +37,8 @@ nav {
 }
 
 
+/* Estilo del evento para buscar: tamaño, bg, scroll */
+
 .buscadorNav {
 
     width: 400px;
@@ -49,13 +46,14 @@ nav {
     max-height: 500px;
     overflow-y: scroll;
     background-color: ghostwhite;
-    
-
 }
 
-.peliBuscador{
-   
+
+.peliBuscador:hover{
+    background-color: darkgray;
+    border-radius: 5px;
 }
+
 
 .imagenesBuscador {
     width: 30%;
@@ -67,6 +65,7 @@ nav {
     text-align: center;
 }
 
+/* Media para la posicion del evento en las diferentes pantallas */
 
 @media (max-width: 600px) {
     .buscadorNav {
