@@ -21,7 +21,11 @@ const authUser = (event) => {
  const userEmail = document.getElementById('userEmail').value;
  const userPass = document.getElementById('userPass').value;
 
+ 
  const storedUsers = JSON.parse(localStorage.getItem('users'));
+
+
+
 
  const authenticatesUser = storedUsers.find((user) => {
     if (newUser.email === userEmail && newUserUser.password === userPass) {
