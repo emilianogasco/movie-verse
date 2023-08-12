@@ -19,6 +19,7 @@ const showPassword = () => {
 
 //Accedemos a nuestros inputs email y password 
 const authUser = (event) => {
+    event.preventDefault()
  const userEmail = document.getElementById('userEmail').value;
  const userPass = document.getElementById('userPass').value;
 
@@ -30,17 +31,22 @@ const authUser = (event) => {
 
 //Iteramos entre los usuarios guardados para ver si hay una coincidencia
  const authenticatesUser = storedUsers.find((user) => {
-    if (newUser.email === userEmail && newUserUser.password === userPass) {
-        return user
+    if (user.email === userEmail && user.password === userPass) {
+        
+        return user.name
+    
     } 
 })
+
+
 //Si existe authenticatesUser se va a guardar en el localStorage de lo contrario se genera una alerta
-    if (authenticatesUser) {
-      localStorage.setItem('authUser', JSON.stringify('authenticatesUser'))
-      window.location.href = 'http://127.0.0.1:5501/index.html';
-      alert(`Bienvenido ${authenticatesUser}`);
-    } else { 
-        alert('Las credenciales no son correctas');
-    }
+     if (authenticatesUser) {
+       localStorage.setItem('authUser', JSON.stringify(authenticatesUser));
+       alert(`Bienvenido ${authenticatesUser.name}`);
+       window.location.href = 'http://127.0.0.1:5501/index.html';
+       
+     } else { 
+         alert('Las credenciales no son correctas');
+     }
 
 };
