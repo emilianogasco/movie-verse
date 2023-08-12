@@ -15,6 +15,7 @@
     <!--  css proyecto -->
     <link rel="stylesheet" href="../styles/navbar.css">
 
+    <!-- css Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
@@ -26,10 +27,12 @@
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
           <img class="logo" src="../src/img/logo/logo-movie-verse.svg" alt="logo">
-          <a class="nav-link active me-4 fs-5 logoNav" aria-current="page" href="#">Movie verse</a>
+          <a class="nav-link active me-4 fs-5 tituloNav" aria-current="page" href="#">Movie verse</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Secciones Navbar -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navText">
               <li class="nav-item d-flex align-items-center ms-2">
@@ -42,22 +45,36 @@
               </li>
               <li class="nav-item d-flex align-items-center ms-2">
                 <i class="bi bi-film me-1"></i>
-                <a class="nav-link" href="#">Peliculas</a>
+                <a class="nav-link active" href="#">Peliculas</a>
               </li>
               <li class="nav-item d-flex align-items-center ms-2">
                 <i class="bi bi-camera-video-fill me-1"></i>
-                <a class="nav-link" href="#">Series</a>
+                <a class="nav-link active" href="#">Series</a>
               </li>
             </ul>
+
+            <!-- Buscador Navbar -->
 
             <form class="d-flex" role="search">
               <input class="form-control me-2" onclick="abrirBuscador()" onblur="cerrarBuscador()"  type="search" placeholder="Ingresa tu peli/serie" aria-label="Search">
               <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
+
+            <!-- Evento del buscador JS -->
             <div class="container-fluid buscadorNav d-none mt-2" id="search">
-              <div class="d-flex my-2 align-items-center">
+              <div class="d-flex my-2 align-items-center peliBuscador">
                 <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Titulo</p>
+                <p class="titulosBuscador">Anabelle</p>
+              </div>
+              <hr>
+              <div class="d-flex my-2 align-items-center peliBuscador">
+                <img class="w-25 imagenesBuscador" src="../src/img/pelis/como si fuera la primera vez.jpeg" alt="">
+                <p class="titulosBuscador">Como si fuera la primera vez</p>
+              </div>
+              <hr>
+              <div class="d-flex my-2 align-items-center">
+                <img class="w-25 imagenesBuscador" src="../src/img/pelis/ted.jpg" alt="">
+                <p class="titulosBuscador">Ted 2</p>
               </div>
               <hr>
               <div class="d-flex my-2 align-items-center">
@@ -70,18 +87,7 @@
                 <p class="titulosBuscador">Titulo</p>
               </div>
               <hr>
-              <div class="d-flex my-2 align-items-center">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Titulo</p>
-              </div>
-              <hr>
-              <div class="d-flex my-2 align-items-center">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Titulo</p>
-              </div>
-              <hr>
-            
-             
+        
             </div>
           </div>
         </div>
@@ -90,7 +96,7 @@
     
     <!-- script de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <!-- script del proyecto -->
+    <!-- script del navbar -->
     <script src="../app/navbar.js"></script>
   </body>
 </html>
