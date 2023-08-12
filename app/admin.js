@@ -106,7 +106,7 @@ function obtenerTablaPyS(){
     tabla.innerHTML+=`
       <tr idPyS="${id}">
         <th scope="row">${id}</th>
-        <td><img src="${img}" alt="" id="idPyS"></td>
+        <td><img src="${img}" alt="" class="img-pys"></td>
         <td>${titulo}</td>
         <td>${tipo}</td>
         <td>${categoria}</td>
@@ -117,8 +117,8 @@ function obtenerTablaPyS(){
           </div>
         </td>
         <td>
-          <div class="btn btn-sm btn-secondary" > <i class="bi bi-pencil-fill"></i></div>
-          <div class="btn btn-sm btn-danger " > <i class="bi bi-trash-fill"></i></div>
+          <div class="btn btn-sm btn-secondary" onclick='editar(${id})'> <i class="bi bi-pencil-fill"></i></div>
+          <div class="btn btn-sm btn-danger "onclick='eliminar(${id})' > <i class="bi bi-trash-fill"></i></div>
         </td>
       </tr>
     
@@ -130,22 +130,16 @@ function obtenerTablaPyS(){
 obtenerTablaPyS();
 
 //editar peliculas y series
+function editar(id) {
+ 
+  console.log("Editando elemento con ID:", id);
+}
 
-
-
-// tabla.addEventListener('click', function(event){
-//   const btnEditar = document.querySelectorAll('.editar');
-//   console.log
-//   for (let i = 0; i < btnEditar.length; i++) {
-//     alert(this.innertText + "clicked")
-     
-//    }
-
-// })
+//eliminar peliculas y series
+function eliminar(id) {
   
-  // seleccionar la fila para sacar el idPyS
-  // const fila = btn.parentNode.parentNode;
-
+  console.log("Eliminando elemento con ID:", id);
+}
 
 // selector de mensaje
 let mensaje = document.querySelector('.mensaje');
