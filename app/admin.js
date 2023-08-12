@@ -91,10 +91,11 @@ function bdd() {
 //tranformo la bd en un JSON y lo almacena en la varible por las dudas si no existe crea un array vacio
 const storedPyS = JSON.parse(localStorage.getItem ('PyS')) || [];
 
-//obtengo el id tabla
+//obtengo el id tabla donde se mostraran las peliculas y serias
 const tabla = document.getElementById('tabla');
-//funcion para obtener la tabla
+//funcion para obtener la tabla de PyS
 function obtenerTablaPyS(){
+  tabla.innerHTML=''
   storedPyS.forEach((pys) => {
     const id = pys.id;
     const img = pys.img;
@@ -104,7 +105,7 @@ function obtenerTablaPyS(){
     const descripcion = pys.descripcion;
     const publicado = pys.publicado;
     tabla.innerHTML+=`
-      <tr idPyS="${id}">
+      <tr>
         <th scope="row">${id}</th>
         <td><img src="${img}" alt="" class="img-pys"></td>
         <td>${titulo}</td>
@@ -113,7 +114,7 @@ function obtenerTablaPyS(){
         <td>${descripcion}</td>
         <td>
           <div class="form-check d-flex justify-content-center aling-items-center">
-          <input class="form-check-input" type="checkbox" ${publicado} id="flexCheckDefault">
+          <input class="form-check-input" type="checkbox" ${publicado} id="flexCheckDefault" disabled>
           </div>
         </td>
         <td>
@@ -137,8 +138,19 @@ function editar(id) {
 
 //eliminar peliculas y series
 function eliminar(id) {
-  
-  console.log("Eliminando elemento con ID:", id);
+  // aqui con la propiedad findIndex selecciono la posicion en la que se encuentra dentro del array
+  const posisionPyS = storedPyS.findIndex(pys => pys.id === id);
+  //preugnto si quiero eliminar la pelicula o serie
+  if(confirm('¿Quieres relamente eliminar la pelicula o serie?')){
+    //pregunto si esto no es diferente a -1
+    if (posisionPyS !== -1) {
+      //elimino todo lo de esa posicion
+      storedPyS.splice(posisionPyS, 1);
+      //alamceno la nueva informacion en la key PyS
+      localStorage.setItem('PyS', JSON.stringify(storedPyS));
+      obtenerTablaPyS();
+    }
+  }
 }
 
 // selector de mensaje
