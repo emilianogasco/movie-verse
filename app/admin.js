@@ -1,28 +1,31 @@
 //base de datos de peliculas y serie
 const bdpys = [
   {
-    "id":0 ,
-    "titulo" :"Dark" ,
-    "tipo" : "pelicula" ,
-    "categoria" : "accion",
-    "descripcion" : "esto es una descricion",
-    "publicado" : "checked" 
+    id : 0 ,
+    titulo :"Dark" ,
+    tipo : "pelicula" ,
+    categoria : "accion",
+    descripcion : "esto es una descricion",
+    publicado : "checked", 
+    img : "../src/img/pelis/ted.jpg", 
   },
   {
-    "id":1 ,
-    "titulo" :"Dark 2" ,
-    "tipo" : "serie" ,
-    "categoria" : "accion",
-    "descripcion" : "esto es una descricion",
-    "publicado" : "checked" 
+    id : 1 ,
+    titulo :"Dark 2" ,
+    tipo : "serie" ,
+    categoria : "accion",
+    descripcion : "esto es una descricion",
+    publicado : "checked",
+    img : "../src/img/pelis/ted.jpg",  
   },
   {
-    "id":2 ,
-    "titulo" :"Dark 3" ,
-    "tipo" : "pelicula" ,
-    "categoria" : "accion",
-    "descripcion" : "esto es una descricion",
-    "publicado" : "" 
+    id : 2 ,
+    titulo :"Dark 3" ,
+    tipo : "pelicula" ,
+    categoria : "accion",
+    descripcion : "esto es una descricion",
+    publicado : "",
+    img : "../src/img/pelis/ted.jpg", 
   },
 
 ]
@@ -39,14 +42,16 @@ const tabla = document.getElementById('tabla');
 function obtenerTablaPyS(){
   storedPyS.forEach((pys) => {
     const id = pys.id;
+    const img = pys.img;
     const titulo = pys.titulo;
     const tipo = pys.tipo;
     const categoria = pys.categoria;
     const descripcion = pys.descripcion;
     const publicado = pys.publicado;
     tabla.innerHTML+=`
-      <tr>
+      <tr idPyS="${id}">
         <th scope="row">${id}</th>
+        <td><img src="${img}" alt="" id="idPyS"></td>
         <td>${titulo}</td>
         <td>${tipo}</td>
         <td>${categoria}</td>
@@ -57,8 +62,8 @@ function obtenerTablaPyS(){
           </div>
         </td>
         <td>
-          <div class="btn btn-sm btn-secondary" > <i class="bi bi-pencil-fill"></i></div>
-          <div class="btn btn-sm btn-danger" onclick="confirm('realemnte quiere elimiar esta pelicula?')"> <i class="bi bi-trash-fill"></i></div>
+          <div class="btn btn-sm btn-secondary editar" > <i class="bi bi-pencil-fill"></i></div>
+          <div class="btn btn-sm btn-danger borrar" > <i class="bi bi-trash-fill"></i></div>
         </td>
       </tr>
     
@@ -68,6 +73,24 @@ function obtenerTablaPyS(){
 }
 //muestro la tabla
 obtenerTablaPyS();
+
+//editar peliculas y series
+
+
+
+tabla.addEventListener('click', function(event){
+  const btnEditar = document.querySelectorAll('.editar');
+  console.log
+  for (let i = 0; i < btnEditar.length; i++) {
+    alert(this.innertText + "clicked")
+     
+   }
+
+})
+  
+  // seleccionar la fila para sacar el idPyS
+  // const fila = btn.parentNode.parentNode;
+
 
 // selector de mensaje
 let mensaje = document.querySelector('.mensaje');
