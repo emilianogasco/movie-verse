@@ -12,8 +12,10 @@ color: white;
 color: rgb(107, 107, 112);
 }
 .description {
-    font-size: 12px;
     text-align:start;
     color:rgb(255, 255, 255);
+}
+.texto {
+    font-size: 13px;
 }
  
