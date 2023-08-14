@@ -105,7 +105,7 @@ if (basePyS && movieIndex < basePyS.length) {
             <div class="row"> 
               <div class="col-12 col-md-6">
             <div>
-              <h4>${movie.titulo}</h4>
+              <h4>${movie.titulo} </h4>
           <div class="informacion d-flex mb-3">
                 <p class="texto mb-3 me-2">2 h 7 min</p>
                 <i class="bi bi-badge-hd me-2"></i>
