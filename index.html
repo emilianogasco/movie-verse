@@ -23,82 +23,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&family=Special+Elite&display=swap" rel="stylesheet">
+
   
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <img class="logo" src="./src/img/logo/logo-movie-verse.svg" alt="logo">
-          <a class="nav-link active me-4 fs-5 logoNav" aria-current="page" href="#">Movie verse</a>
+          <img class="logo" src="../src/img/logo/logo-movie-verse.svg" alt="logo">
+          <a class="nav-link active me-4 fs-5 tituloNav" aria-current="page" href="#">Movie verse</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse navtext mt-3" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <div class="container d-flex justify-content-start">
-                  <img class="iconos" src="./src/img/logo/home.png" alt="home">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a> 
-                </div>
+
+          <!-- Secciones Navbar -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navText">
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-house-fill me-1"></i>
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
               </li>
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/account.png" alt="login">
-                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
-                  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
-                          <img class="logoModal" src="./src/img/logo/logo-movie-verse.svg" alt="logo">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <form class="d-flex flex-column align-items-center">
-                            <label for="usuario">Ingrese su usuario</label>
-                            <input class="mb-3" type="text"  id="usuario">
-                            <label for="password">Ingrese su contraseña</label>
-                            <input class="mb-3" type="password" id="password">
-                          </form>
-                          <p>Todavia no estas registrado?</p>
-                          <a href="http://">Registrate</a>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                          <button type="button" class="btn btn-primary">Ingresar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li> 
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/movies.png" alt="register">
-                  <a class="nav-link" href="#">Peliculas</a>
-                </div>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-door-open-fill me-1"></i>
+                <a class="nav-link active" href="./login.html">Login</a>
               </li>
-              <li class="nav-item">
-                <div class="container d-flex">
-                  <img class="iconos" src="./src/img/logo/series.png" alt="register">
-                  <a class="nav-link" href="#">Series</a>
-                </div>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-camera-reels-fill me-1"></i>
+                <a class="nav-link active" href="#">Peliculas</a>
               </li>
-            </ul>
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li class="nav-item">
-              <img class="marcas"  src="../src/img/marcas/Marvel.svg" alt="marvel">
-                </li>
-                <li class="nav-item">
-                  <img class="marcas" src="../src/img/marcas/DC-Comics-Logo-PNG-Photos.png" alt="marvel">
-                </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-camera-video-fill me-1"></i>
+                <a class="nav-link active" href="#">Series</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-telephone-fill me-1"></i>
+                <a class="nav-link active" href="#">Contacto</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-file-person-fill me-1"></i>
+                <a class="nav-link active" href="./aboutus.html">Sobre Nosotros</a>
+              </li>
             </ul>
 
+            <!-- Buscador Navbar -->
+
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Ingresa tu peli/serie" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+              <input class="form-control me-2" onclick="abrirBuscador()" onblur="cerrarBuscador()"  type="search" placeholder="Ingresa tu peli/serie" aria-label="Search" id="buscador">
+              <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
+
+            <!-- Evento del buscador JS -->
+            <div class="container-fluid buscadorNav mt-2 d-none" id="resultado">
+              
+         
+        
+            </div>
           </div>
         </div>
       </nav>
@@ -106,41 +86,139 @@
 
     <main>
       <section>
-        <div class="bgpeli d-flex flex-column  justify-content-end">
+        <div class="bgpeli d-flex flex-column justify-content-end">
           <div class="m-3">
-            <h4 class="mb-3">Interestellar</h4>
+            <h4 class="mb-3 tituloPeli">Interestellar</h4>
             <div class="descPeli">
-              <h7 class="mb-3 ">Cuando la Tierra se vuelve inhabitable en el futuro, un granjero y ex piloto de la NASA, Joseph Cooper, tiene la tarea de pilotar una nave espacial, junto con un equipo de investigadores, para encontrar un nuevo planeta para los humanos.</h7>
+              <h7 class="mb-3 ">La trama sigue al ex-piloto de la NASA y granjero Cooper en un futuro distópico donde la Tierra está al borde del colapso debido a la escasez de alimentos y cambios climáticos extremos.</h7>
 
             </div>
             <div class="mt-3">
-              <button class="btn btn-primary">Reproducir :)</button>
+              <button class="btn btn-warning botonReproducir">Reproducir :)</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="letraIndex">
-        <div class="separador" >
-          <img class="marcas mt-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="">
-          <h2 class="mt-4 titulo">Hecha un vistaso a todas nuestras pelis!</h2>
+      <section class="">
+        <div class="separador container" >
+          <img class="logoSeparador mt-3 mx-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="logo2">
+          <h2 class="mt-4 titulo">Catalogo de peliculas</h2>
           
         </div>
-        <div class="seccionPelis ">
-          <div class="container ">
+        <div class="seccionPelis">
+          <div class="container">
+            <h5 class="mt-4 ms-3 text-start fw-bold">Comedia</h5>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                  <div class="item m-3">
+                    <a href="./pages/detalle-pelicula.html?id=3">
+                      <img src="./src/img/pelis/como si fuera la primera vez.jpeg" alt="" class="card-img-top imgCarousel" >  
+                    </a>
+                  </div>
+                  <div class="item m-3">
+                    <a href="./pages/detalle-pelicula.html?id=4">
+                      <img src="./src/img/pelis/deadpool2.jpg" alt="" class="card-img-top imgCarousel" >  
+                    </a>
+                  </div>
+                  <div class="item m-3">
+                    <a href="./pages/detalle-pelicula.html?id=11">
+                      <img src="./src/img/pelis/pineapplexpress.jpg" alt="" class="card-img-top imgCarousel">  
+                    </a>
+                  </div>
+                  <div class="item m-3">
+                    <a href="./pages/detalle-pelicula.html?id=7">
+                      <img src="./src/img/pelis/ted.jpg" alt="" class="card-img-top imgCarousel">  
+                    </a>
+                  </div>
+                  <div class="item m-3">
+                    <a href="./pages/detalle-pelicula.html">
+                      <img src="./src/img/pelis/wrong missy.jpg" alt="" class="card-img-top imgCarousel">  
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+  
+          <div class="container">
+            <h5 class="mt-4 ms-3 text-start fw-bold">Terror</h5>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item m-3">
+                      <a href="./pages/detalle-pelicula.html?id=6">
+                        <img src="./src/img/pelis/MV5BMTgxMjIyNTc5Nl5BMl5BanBnXkFtZTgwMjgwNDgwNzE-._V1_.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
+                      </a>
+                    </div>
+                    <div class="item m-3">
+                      <a href="./pages/detalle-pelicula.html?id=1">
+                        <img src="./src/img/pelis/1572019225_928456_1572020312_album_normal.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
+                      </a>
+                    </div>
+                    <div class="item m-3">
+                      <a href="./pages/detalle-pelicula.html?id=0">
+                        <img src="./src/img/pelis/423HV45CZBKCXGNS6355W3HNHY.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
+                      </a>
+                    </div>
+                    <div class="item m-3">
+                      <a href="./pages/detalle-pelicula.html?id=4">
+                        <img src="./src/img/pelis/antebellum.webp" alt="" class="card-img-top imgCarousel" height="200px">  
+                      </a>
+                    </div>
+                    <div class="item m-3">
+                      <a href="./pages/detalle-pelicula.html?id=5">
+                        <img src="./src/img/pelis/DIWCCFQJBJKALNQ3BET2QXU674.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
+                      </a>
+                    </div>
+                 
+                  </div>
+              
+                </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <h5 class="mt-4 ms-3 text-start fw-bold">Accion</h5>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item m-3">
+                      <img src="./src/img/pelis/transformers caratula.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src=".//src/img/pelis/Justice League.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="80px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src="./src//img/pelis/civilwar.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="30px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src="./src/img/pelis/el niño.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="100px">  
+                    </div>
+              
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="separador container" >
+          <img class="logoSeparador mt-3 mx-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="">
+          <h2 class="mt-4 titulo">Catalogo de Series</h2>
+          
+        </div>
+
+        <div class="seccionPelis">
+          <div class="container">
             <h5 class="mt-4 ms-3 text-start fw-bold">Comedia</h5>
             <div class="row">
                 <div class="owl-carousel owl-theme">
                     <div class="item m-3">
-                      <img src="./src/img/pelis/como si fuera la primera vez.jpeg" alt="" class="card-img-top" height="200px">  
+                      <img src="./src/img/series/friends.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/deadpool2.jpg" alt="" class="card-img-top" height="200px" width="80px">  
+                        <img src="./src/img/series/modernfamily.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="80px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/ted.jpg" alt="" class="card-img-top" height="200px" width="30px">  
+                        <img src="./src/img/series/theoffice.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="30px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/wrong missy.jpg" alt="" class="card-img-top" height="200px" width="100px">  
+                        <img src="./src/img/series/two and a half men.webp" alt="" class="card-img-top imgCarousel" height="200px" width="100px">  
                     </div>
               
                 </div>
@@ -148,47 +226,46 @@
           </div>
   
           <div class="container">
-            <h5 class="mt-5 ms-3 text-start fw-bold">Terror</h5>
+            <h5 class="mt-4 ms-3 text-start fw-bold">Sci-Fi</h5>
             <div class="row">
                 <div class="owl-carousel owl-theme">
                     <div class="item m-3">
-                      <img src="./src/img/pelis/antebellum.webp" alt="" class="card-img-top" height="200px" width="100px">  
+                      <img src="./src/img/series/blackmirror.jpg" alt="" class="card-img-top imgCarousel" height="200px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/1572019225_928456_1572020312_album_normal.jpg" alt="" class="card-img-top" height="200px" width="100px">  
+                        <img src=".//src/img/series/lucifer.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="80px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/423HV45CZBKCXGNS6355W3HNHY.jpg" alt="" class="card-img-top" height="200px" width="100px">  
+                        <img src="./src//img/series/rickandmorty.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="30px">  
                     </div>
                     <div class="item m-3">
-                        <img src="./src/img/pelis/MV5BMTgxMjIyNTc5Nl5BMl5BanBnXkFtZTgwMjgwNDgwNzE-._V1_.jpg" alt="" class="card-img-top" height="200px" width="100px">  
+                        <img src="./src/img/series/manifiesto.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="100px">  
                     </div>
               
                 </div>
             </div>
           </div>
-  
-          <div class="container">
-            <h5 class="mt-5 ms-3 text-start fw-bold">Comedia</h5>
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    <div class="item m-3">
-                      <img src="./src/img/pelis/como si fuera la primera vez.jpeg" alt="" class="card-img-top" height="230px" width="100px">  
-                    </div>
-                    <div class="item m-3">
-                        <img src="./src/img/pelis/deadpool2.jpg" alt="" class="card-img-top" height="230px" width="100px">  
-                    </div>
-                    <div class="item m-3">
-                        <img src="./src/img/pelis/ted.jpg" alt="" class="card-img-top" height="230px" width="100px">  
-                    </div>
-                    <div class="item m-3">
-                        <img src="./src/img/pelis/wrong missy.jpg" alt="" class="card-img-top" height="230px" width="100px">  
-                    </div>
-              
-                </div>
-            </div>
 
-        </div>
+          <div class="container">
+            <h5 class="mt-4 ms-3 text-start fw-bold">Accion</h5>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item m-3">
+                      <img src="./src/img/pelis/starwars.webp" alt="" class="card-img-top imgCarousel" height="200px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src=".//src/img/pelis/Justice League.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="80px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src="./src//img/pelis/civilwar.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="30px">  
+                    </div>
+                    <div class="item m-3">
+                        <img src="./src/img/pelis/el niño.jpg" alt="" class="card-img-top imgCarousel" height="200px" width="100px">  
+                    </div>
+              
+                </div>
+            </div>
+          </div>
         </div>
 
 

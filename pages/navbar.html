@@ -44,49 +44,34 @@
                 <a class="nav-link active" href="./login.html">Login</a>
               </li>
               <li class="nav-item d-flex align-items-center ms-2">
-                <i class="bi bi-film me-1"></i>
+                <i class="bi bi-camera-reels-fill me-1"></i>
                 <a class="nav-link active" href="#">Peliculas</a>
               </li>
               <li class="nav-item d-flex align-items-center ms-2">
                 <i class="bi bi-camera-video-fill me-1"></i>
                 <a class="nav-link active" href="#">Series</a>
               </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-telephone-fill me-1"></i>
+                <a class="nav-link active" href="#">Contacto</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-file-person-fill me-1"></i>
+                <a class="nav-link active" href="./aboutus.html">Sobre Nosotros</a>
+              </li>
             </ul>
 
             <!-- Buscador Navbar -->
 
             <form class="d-flex" role="search">
-              <input class="form-control me-2" onclick="abrirBuscador()" onblur="cerrarBuscador()"  type="search" placeholder="Ingresa tu peli/serie" aria-label="Search">
+              <input class="form-control me-2" onclick="abrirBuscador()" onblur="cerrarBuscador()"  type="search" placeholder="Ingresa tu peli/serie" aria-label="Search" id="buscador">
               <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
 
             <!-- Evento del buscador JS -->
-            <div class="container-fluid buscadorNav d-none mt-2" id="search">
-              <div class="d-flex my-2 align-items-center peliBuscador">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Anabelle</p>
-              </div>
-              <hr>
-              <div class="d-flex my-2 align-items-center peliBuscador">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/como si fuera la primera vez.jpeg" alt="">
-                <p class="titulosBuscador">Como si fuera la primera vez</p>
-              </div>
-              <hr>
-              <div class="d-flex my-2 align-items-center">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/ted.jpg" alt="">
-                <p class="titulosBuscador">Ted 2</p>
-              </div>
-              <hr>
-              <div class="d-flex my-2 align-items-center">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Titulo</p>
-              </div>
-              <hr>
-              <div class="d-flex my-2 align-items-center">
-                <img class="w-25 imagenesBuscador" src="../src/img/pelis/antebellum.webp" alt="">
-                <p class="titulosBuscador">Titulo</p>
-              </div>
-              <hr>
+            <div class="container-fluid buscadorNav mt-2 d-none" id="resultado">
+              
+         
         
             </div>
           </div>
