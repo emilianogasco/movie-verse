@@ -1,8 +1,8 @@
+/* Portada de pelicula */
 .bgpeli {
-background-color: cadetblue ;
+background-image: url("../src/img/backgroun-image/background-cine.jpg") ;
 background-position: center;
 background-size: cover;
-height: 400px;
 letter-spacing: 0.5px;
 font-family: 'Alegreya Sans SC', sans-serif;
 color: white;
@@ -11,9 +11,10 @@ color: white;
 color: rgb(107, 107, 112);
 }
 .description {
-    width: 20vw;
-    font-size: 12px;
     text-align:start;
     color:rgb(255, 255, 255);
+}
+.texto {
+    font-size: 13px;
 }
  

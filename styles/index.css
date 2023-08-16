@@ -1,9 +1,10 @@
+/* Fuente del proyecto */
 *{
     font-family: 'Alegreya Sans SC', sans-serif;
 
-   
-
 }
+
+/* Background de seccion Peli Fija */
 .bgpeli {
 
     background-image: url(../src/img/pelis/Interstellar-1920x1080.jpg);
@@ -15,8 +16,13 @@
     
 }
 
+/* Contenedor de la descripcion de Transformers */
+.descPeli{
+    width: 20vw;
+    font-size: 12px;
+}
 
-
+/* Media query Seccion Imagen Fija */
 
 @media (max-width: 600px) {
 
@@ -35,11 +41,8 @@
     }
     
 }
-.descPeli{
-    width: 20vw;
-    font-size: 12px;
-}
 
+/* Estilos del separador de Secciones */
 .logoSeparador{
     height:45px;
 }
@@ -56,16 +59,14 @@
 }
 
 .titulo {
-    font-family: 'Alegreya Sans SC', sans-serif;
     font-family: 'Special Elite', cursive;
 }
 
+/* Estilos del Carousel */
 .card-img-top{
     border-radius: 15px;
     
 }
-
-
 
 .cards{
    margin-right: 25px;
@@ -77,8 +78,6 @@
 
 
 .imgCarousel {
-
-   
    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.3);
    height: 27vh;
    width: 5vw;
@@ -86,20 +85,44 @@
    
 }
 
-
-
-    
-
-@media (max-width: 450px) {
+/* Media query Carousel */
+@media (max-width: 376px) {
     .imgCarousel {
         
-        margin-left: 80px;
+        margin-left: 48px;
         width: 60px;
         height: 220px;
     }
     
 }
 
+@media (min-width: 389px) {
+    .imgCarousel {
+        
+        margin-left: 62px;
+        width: 60px;
+        height: 220px;
+    }
+    
+}
+
+@media (min-width: 389px) {
+    .imgCarousel {
+        
+        margin-left: 75px;
+        width: 60px;
+        height: 220px;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    .imgCarousel {
+
+        margin-left: 0px;
+        height: 200px;
+    }
+}
 
 
     
