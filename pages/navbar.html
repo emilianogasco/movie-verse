@@ -64,15 +64,21 @@
             <!-- Buscador Navbar -->
 
             <form class="d-flex" role="search">
-              <input class="form-control me-2" onclick="abrirBuscador()" onblur="cerrarBuscador()"  type="search" placeholder="Ingresa tu peli/serie" aria-label="Search" id="buscador">
+              <input class="form-control me-2"   type="search" placeholder="Ingresa tu peli/serie" aria-label="Search" id="buscador">
               <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
 
             <!-- Evento del buscador JS -->
             <div class="container-fluid buscadorNav mt-2 d-none" id="resultado">
-              
-         
-        
+
+              <div class="d-flex my-2 align-items-center peliBuscador">
+                <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador">
+                  <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
+                </a>
+                <p class="titulosBuscador">${titulo}</p>
+              </div>
+    
+           <hr>
             </div>
           </div>
         </div>

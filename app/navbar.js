@@ -1,12 +1,8 @@
-// function abrirBuscador () {
-//     const abrirBuscador = document.getElementById("search");
-//     abrirBuscador.classList.remove("d-none");
-// }
 
- function cerrarBuscador () {
-    resultado.classList.add("d-none");
-    buscador.value = "";
-}
+//  function cerrarBuscador () {
+//     resultado.classList.add("d-none");
+//     buscador.value = "";
+// }
 
 //base de datos de peliculas y serie
 const bdpys = [
@@ -125,19 +121,22 @@ buscador.addEventListener("input", function() {
 
     basePyS.forEach(pys => {
 
+        const id = pys.id;
         const img = pys.img;
         const titulo = pys.titulo.toLowerCase();
-        
-       
+      
+
         if(titulo.includes(resultadoBuscador)) {
             resultado.innerHTML += `<div class="d-flex my-2 align-items-center peliBuscador">
-            <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
-            <p class="titulosBuscador">${titulo}</p>
-            </div>
-          <hr>
+            <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador">
+              <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
+              <p class="titulosBuscador">${titulo}</p>
+            </a>
+        </div>
+
+       <hr>
             `
         }  
-        
       });
   
     })
