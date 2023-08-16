@@ -1,9 +1,3 @@
-//  function cerrarBuscador () {
-//     resultado.classList.add("d-none");
-//     buscador.value = "";
-// }
-
-//base de datos de peliculas y serie
 const bdpys = [
     {
       id : 0 ,
@@ -66,7 +60,7 @@ const bdpys = [
       categoria : "terror",
       descripcion : "Una actriz llama a unos sacerdotes jesuitas para que intenten terminar con la posesión demoníaca de su hija de 12 años.",
       publicado : "",
-      img : "../src/img/pelis/MV5BMTgxMjIyNTc5Nl5BMl5BanBnXkFtZTgwMjgwNDgwNzE-._V1_.jpg", 
+      img : "../src/img/pelis/MV5BMTgxMjIyNTc5Nl5BMl5BanBnXkFtZTgwMjgwNDgwNzE-.V1.jpg", 
     },
     {
       id : 7 ,
@@ -94,48 +88,48 @@ const bdpys = [
 
   const basePyS = JSON.parse(localStorage.getItem("PyS"));
   
-  const resultado = document.getElementById("resultado");
+const urlParams = new URLSearchParams(window.location.search);
+let movieIndex = urlParams.get("id");
 
-  
+const movieDetailsContainer = document.getElementById("movie-details");
 
-const buscador = document.getElementById("buscador");
+if (movieIndex < basePyS.length) {
+  const movie = basePyS[movieIndex]; // Obtener la película en base al índice
+  // Llenar movieDetailsContainer con los detalles de la película
+  movieDetailsContainer.innerHTML = `
+  <div class="container-fluid mt-5">
+  <div class="row"> 
+    <div class="col-12 col-md-6">
+  <div>
+    <div class="mb-2 ">
+  <img class="img-fluid w-25" src="${movie.img} " alt="">
+</div>
+    <h4>${movie.titulo} </h4>
+<div class="informacion d-flex mb-3">
+      <p class="texto mb-3 me-2">2 h 7 min</p>
+      <i class="bi bi-badge-hd me-2"></i>
+      <p class="texto mb-3">2023</p>
+</div>
+  </div>
+<div class="description">
+    <h6>${movie.descripcion}</h6>
+</div>
+<div class="mb-2">
+    <a href="./error-404.html">
+      <button class="btn btn-primary">Reproducir <i class="bi bi-caret-right-square-fill"></i></button>
+    </a>
+</div>
+<div class="mb-2">
+    <a href="./pages/error-404.html">
+      <button class="btn btn-primary">Ver trailer</button>
+    </a>
+</div>
 
-buscador.addEventListener("input", function() {
+  </div>
+  </div>
+</div>
 
-    
-    if(buscador.value === "") {
-
-        resultado.classList.add("d-none");
-
-    } else if (buscador.value) {
-        
-        resultado.classList.remove("d-none");
-    }
-
-    const resultadoBuscador = buscador.value.toLowerCase();
-
-    console.log(resultadoBuscador);
-
-    resultado.innerHTML = "";
-
-    basePyS.forEach(pys => {
-
-        const id = pys.id;
-        const img = pys.img;
-        const titulo = pys.titulo.toLowerCase();
-      
-
-        if(titulo.includes(resultadoBuscador)) {
-            resultado.innerHTML += `<div class="d-flex my-2 align-items-center peliBuscador">
-            <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador text-decoration-none text-dark">
-              <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
-              <p class="titulosBuscador">${titulo}</p>
-            </a>
-        </div>
-
-       <hr>
-            `
-        }  
-      });
-  
-    })
+  `;
+} else {
+  // Mostrar mensaje de error si no se encuentra la película
+  movieDetailsContainer.innerHTML = "<p>La película no se encontró.</p>"; }

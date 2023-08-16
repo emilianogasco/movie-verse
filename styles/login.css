@@ -1,0 +1,11 @@
+* { margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url(../src/img/backgroun-image/background-cine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}

@@ -1,3 +1,10 @@
+/* Fuente del proyecto */
+*{
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+}
+
+/* Background de seccion Peli Fija */
 .bgpeli {
 
     background-image: url(../src/img/pelis/Interstellar-1920x1080.jpg);
@@ -6,56 +13,117 @@
     background-repeat: no-repeat;
     height: 300px;
     color: white;
-    font-family: 'Alegreya Sans SC', sans-serif;
-}
-   
-
-.letraIndex{
-    font-family: 'Alegreya Sans SC', sans-serif;
     
 }
 
+/* Contenedor de la descripcion de Transformers */
 .descPeli{
     width: 20vw;
     font-size: 12px;
 }
-.title {
-    text-align: center;
-    margin: 100px;
-    
-}   
 
-.seccionPelis{
+/* Media query Seccion Imagen Fija */
+
+@media (max-width: 600px) {
+
+    .descPeli, .tituloPeli{
+        display: none;
+    }
+
+    .bgpeli{
+        justify-content: start;
+        height: 200px;
+    }
     
+    .botonReproducir {
+        width: 95px;
+        font-size: 12px;
+    }
+    
+}
+
+/* Estilos del separador de Secciones */
+.logoSeparador{
+    height:45px;
 }
 
 .separador{
 
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-image: url(../src/img/backgroun-image/black-and-white-star-1920-x-1200-wallpaper-rbebqq0sgqfbxy3o.jpg);
+    background-size: cover;
     
 }
 
+.titulo {
+    font-family: 'Special Elite', cursive;
+}
+
+/* Estilos del Carousel */
 .card-img-top{
     border-radius: 15px;
-    box-shadow: 0px 0px 24px 7px rgba(0,0,0,0.3);
+    
+}
+
+.cards{
+   margin-right: 25px;
+    max-width: 250px;
+    text-align: center;
+    max-height: 350px;
+    height: 280px;
+}
+
+
+.imgCarousel {
+   box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.3);
+   height: 27vh;
+   width: 5vw;
+   max-width: 220px;
+   
+}
+
+/* Media query Carousel */
+@media (max-width: 376px) {
+    .imgCarousel {
+        
+        margin-left: 48px;
+        width: 60px;
+        height: 220px;
+    }
+    
+}
+
+@media (min-width: 389px) {
+    .imgCarousel {
+        
+        margin-left: 62px;
+        width: 60px;
+        height: 220px;
+    }
+    
+}
+
+@media (min-width: 389px) {
+    .imgCarousel {
+        
+        margin-left: 75px;
+        width: 60px;
+        height: 220px;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    .imgCarousel {
+
+        margin-left: 0px;
+        height: 200px;
+    }
+}
+
+
     
 
-}
-
-.card-img-top:hover{
-
-    height: 220px;
-    width: 300px;
-    transition: 600ms;
-}
-
-.item{
-    width: 190px;
-
-}
-
-.item:hover{
-    width:210px;
-    transition: 600ms;
-}
