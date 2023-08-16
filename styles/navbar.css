@@ -63,6 +63,7 @@ nav {
 .titulosBuscador {
     width: 70%;
     text-align: center;
+    font: black;
 }
 
 /* Media para la posicion del evento en las diferentes pantallas */
