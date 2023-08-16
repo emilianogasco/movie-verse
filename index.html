@@ -27,15 +27,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&family=Special+Elite&display=swap" rel="stylesheet">
 
+    <!--  css proyecto -->
+    <link rel="stylesheet" href="../styles/navbar.css">
+
   
   </head>
   <body>
     <header>
-      
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <img class="logo" src="../src/img/logo/logo-movie-verse.svg" alt="logo">
+          <a class="nav-link active me-4 fs-5 tituloNav" aria-current="page" href="./index.html">Movie verse</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Secciones Navbar -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navText">
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-house-fill me-1"></i>
+                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-door-open-fill me-1"></i>
+                <a class="nav-link active" href="./pages/login.html">Login</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-camera-reels-fill me-1"></i>
+                <a class="nav-link active" href="#pelicuas">Peliculas</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-camera-video-fill me-1"></i>
+                <a class="nav-link active" href="#series">Series</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-telephone-fill me-1"></i>
+                <a class="nav-link active" href="#">Contacto</a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-2">
+                <i class="bi bi-file-person-fill me-1"></i>
+                <a class="nav-link active" href="./pages/aboutus.html">Sobre Nosotros</a>
+              </li>
+            </ul>
+
+            <!-- Buscador Navbar -->
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2"   type="search" placeholder="Ingresa tu peli/serie" aria-label="Search" id="buscador">
+              <button class="btn btn-warning" type="submit">Buscar</button>
+            </form>
+
+            <!-- Evento del buscador JS -->
+            <div class="container-fluid buscadorNav mt-2 d-none" id="resultado">
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-
       <!-- Imagen fija Peli Interestellar -->
       <section>
         <div class="bgpeli d-flex flex-column justify-content-end">
@@ -53,7 +104,7 @@
 
       <!-- Separador de Secciones -->
       <section>
-        <div class="separador container" >
+        <div class="separador container" id="pelicuas" >
           <img class="logoSeparador mt-3 mx-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="logo2">
           <h2 class="mt-4 titulo">Catalogo de peliculas</h2>
         </div>
@@ -93,7 +144,7 @@
         </div>
 
         <!-- Separador de Secciones -->
-        <div class="separador container" >
+        <div class="separador container" id="series">
           <img class="logoSeparador mt-3 mx-3" src="./src/img/logo/logo-movie-verse-2.svg" alt="">
           <h2 class="mt-4 titulo">Catalogo de Series</h2>
         </div>
@@ -203,7 +254,50 @@
         </div>
       </section>
     </main>
-    
+    <footer class="border-top mt-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 ">
+          <div class="col-12 col-md-6 mb-3">
+            <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+              <img src="../src/img/logo/logo-movie-verse.svg" alt="" style="width: 150px;">
+            </a>
+            <p class="text-body-secondary">© 2023 Movie Vere</p>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3">
+            <h5>Categoria Peliculas</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#accion" class="nav-link p-0 text-body-secondary">Accion</a></li>
+              <li class="nav-item mb-2"><a href="#terror" class="nav-link p-0 text-body-secondary">Terror</a></li>
+              <li class="nav-item mb-2"><a href="./pages/error-404.html" class="nav-link p-0 text-body-secondary">Suspenso</a></li>
+              <li class="nav-item mb-2"><a href="#comedia" class="nav-link p-0 text-body-secondary">Comedia</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3">
+            <h5>Categoria Series</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="./pages/error-404.html" class="nav-link p-0 text-body-secondary">Accion</a></li>
+              <li class="nav-item mb-2"><a href="./pages/error-404.html" class="nav-link p-0 text-body-secondary">Terror</a></li>
+              <li class="nav-item mb-2"><a href="./pages/error-404.html" class="nav-link p-0 text-body-secondary">Suspenso</a></li>
+              <li class="nav-item mb-2"><a href="./pages/error-404.html" class="nav-link p-0 text-body-secondary">Comicas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3">
+            <h5>Menu</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Inicio</a></li>
+              <li class="nav-item mb-2"><a href="#pelicuas" class="nav-link p-0 text-body-secondary">Peliculas</a></li>
+              <li class="nav-item mb-2"><a href="#series" class="nav-link p-0 text-body-secondary">Series</a></li>
+              <li class="nav-item mb-2"><a href="./pages/aboutus.html" class="nav-link p-0 text-body-secondary">About</a></li>
+              <li class="nav-item mb-2"><a href="./pages/login.html" class="nav-link p-0 text-body-secondary">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- script de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!-- script del proyecto -->

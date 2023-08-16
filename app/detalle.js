@@ -88,48 +88,92 @@ const bdpys = [
 
   const basePyS = JSON.parse(localStorage.getItem("PyS"));
   
+
+/// NAVBAR ///
+// id resultado
+const resultado = document.getElementById("resultado");
+// id buscador
+const buscador = document.getElementById("buscador");
+// escucho el evento del input al presionar una tecla
+buscador.addEventListener("input", function() {
+  // comparo si el valor esta vacio en el input
+  if(buscador.value === "") {
+    resultado.classList.add("d-none");
+  } // si encuenta un valor muestra el resultado
+   else if (buscador.value) {
+    resultado.classList.remove("d-none");
+  }
+  // almacena el valor en una constante resultadoBuscador
+  const resultadoBuscador = buscador.value.toLowerCase();
+  // al resultado lo deja en limpio
+  resultado.innerHTML = "";
+  // recorre la base de datos de peliculas y serie y encuentra conicidencia con el texto escrito
+  basePyS.forEach(pys => {
+    const id = pys.id;
+    const img = pys.img;
+    const titulo = pys.titulo.toLowerCase();
+
+    //inserta codigo html en la constante resultado
+    if(titulo.includes(resultadoBuscador)) {
+        resultado.innerHTML += `<div class="d-flex my-2 align-items-center peliBuscador">
+        <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador text-decoration-none text-dark">
+          <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
+          <p class="titulosBuscador">${titulo}</p>
+        </a>
+    </div>
+
+    <hr>
+        `
+    }  
+  });
+
+})
+
+// obtengo el valor del id atraves de un GET
 const urlParams = new URLSearchParams(window.location.search);
+// almaceno el valor del id en la variable movieIndex
 let movieIndex = urlParams.get("id");
 
 const movieDetailsContainer = document.getElementById("movie-details");
+// recorro la base de datos
+basePyS.forEach(pys => {
+  // obtengo una pelicula o serie y pregunto si es exactamente igual al id que recibo por get
+  if(pys.id == movieIndex){
+    // inyecto codigo html en el container de movie detalle
+    movieDetailsContainer.innerHTML = `
+    <div class="container-fluid mt-5">
+      <div class="row"> 
+        <div class="col-12 col-md-6">
+          <div>
+            <div class="mb-2 ">
+              <img class="img-fluid w-25" src="${pys.img} " alt="">
+            </div>
+            <h4>${pys.titulo} </h4>
+            <div class="informacion d-flex mb-3">
+              <p class="texto mb-3 me-2">2 h 7 min</p>
+              <i class="bi bi-badge-hd me-2"></i>
+              <p class="texto mb-3">2023</p>
+            </div>
+          </div>
+          <div class="description">
+            <h6>${pys.descripcion}</h6>
+          </div>
+          <div class="mb-2">
+            <a href="./error-404.html">
+              <button class="btn btn-primary">Reproducir <i class="bi bi-caret-right-square-fill"></i></button>
+            </a>
+          </div>
+          <div class="mb-2">
+            <a href="./pages/error-404.html">
+              <button class="btn btn-primary">Ver trailer</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    `;
+    
+  }
+})
 
-if (movieIndex < basePyS.length) {
-  const movie = basePyS[movieIndex]; // Obtener la película en base al índice
-  // Llenar movieDetailsContainer con los detalles de la película
-  movieDetailsContainer.innerHTML = `
-  <div class="container-fluid mt-5">
-  <div class="row"> 
-    <div class="col-12 col-md-6">
-  <div>
-    <div class="mb-2 ">
-  <img class="img-fluid w-25" src="${movie.img} " alt="">
-</div>
-    <h4>${movie.titulo} </h4>
-<div class="informacion d-flex mb-3">
-      <p class="texto mb-3 me-2">2 h 7 min</p>
-      <i class="bi bi-badge-hd me-2"></i>
-      <p class="texto mb-3">2023</p>
-</div>
-  </div>
-<div class="description">
-    <h6>${movie.descripcion}</h6>
-</div>
-<div class="mb-2">
-    <a href="./error-404.html">
-      <button class="btn btn-primary">Reproducir <i class="bi bi-caret-right-square-fill"></i></button>
-    </a>
-</div>
-<div class="mb-2">
-    <a href="./pages/error-404.html">
-      <button class="btn btn-primary">Ver trailer</button>
-    </a>
-</div>
-
-  </div>
-  </div>
-</div>
-
-  `;
-} else {
-  // Mostrar mensaje de error si no se encuentra la película
-  movieDetailsContainer.innerHTML = "<p>La película no se encontró.</p>"; }

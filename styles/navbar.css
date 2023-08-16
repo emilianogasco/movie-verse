@@ -20,12 +20,10 @@
 /* Estilo del Nav: tamaño, letra y fondo */
 
 nav {
-    
-    height: 60px;
     font-family: 'Alegreya Sans SC', sans-serif;
     background-image: url(../src/img/backgroun-image/stress.jpg);
     background-size: cover;
-    }
+}
 
 
 /* Media para la posicion de las secciones  */
