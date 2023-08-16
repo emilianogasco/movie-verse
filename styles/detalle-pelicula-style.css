@@ -1,6 +1,6 @@
 /* Portada de pelicula */
 .bgpeli {
-background-image:url(../src/img/pelis/transformers_2880x1800_xtrafondos.com.jpg) ;
+background-color: cadetblue ;
 background-position: center;
 background-size: cover;
 height: 400px;

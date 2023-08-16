@@ -88,15 +88,13 @@ const bdpys = [
 
   const basePyS = JSON.parse(localStorage.getItem("PyS"));
   
-
-
 const urlParams = new URLSearchParams(window.location.search);
-const movieIndex = urlParams.get("id");
 
+let movieIndex = urlParams.get("id");
 
 const movieDetailsContainer = document.getElementById("movie-details");
 
-
+// revisar el if, que pasa si alguien entra manual a detalle-pelicula.html
 if (basePyS && movieIndex < basePyS.length) {
   const movie = basePyS[movieIndex]; // Obtener la película en base al índice
   // Llenar movieDetailsContainer con los detalles de la película
