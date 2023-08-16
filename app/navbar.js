@@ -1,4 +1,3 @@
-
 //  function cerrarBuscador () {
 //     resultado.classList.add("d-none");
 //     buscador.value = "";
@@ -128,7 +127,7 @@ buscador.addEventListener("input", function() {
 
         if(titulo.includes(resultadoBuscador)) {
             resultado.innerHTML += `<div class="d-flex my-2 align-items-center peliBuscador">
-            <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador">
+            <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador text-decoration-none text-dark">
               <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
               <p class="titulosBuscador">${titulo}</p>
             </a>
