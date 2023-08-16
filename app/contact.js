@@ -28,7 +28,7 @@ const createUser = (event) => {
      textarea: userTextarea,
     };
 
-    localStorage.setItem('user', JSON.stringify(newUser));
+    localStorage.setItem('message', JSON.stringify(newUser));
 
     window.location.href ='http://127.0.0.1:5501/index.html';
 
