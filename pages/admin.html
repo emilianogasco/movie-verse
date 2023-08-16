@@ -22,7 +22,7 @@
         <div class="display-3 text-center mb-5">Lista de Peliculas y Series</div>
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-sm btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <button type="button" class="btn btn-sm btn-primary " id="abrir-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Agregar <i class="bi bi-plus-circle"></i>
           </button>
         </div>
@@ -80,8 +80,8 @@
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar-modal">Cerrar</button>
-                  <button type="submit" class="btn btn-primary">Agregar</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrar-modal" onclick="cleanForm()">Cerrar</button>
+                  <button type="submit" class="btn btn-primary" id="agregar">Agregar</button>
                 </div>
               </form>
             </div>
