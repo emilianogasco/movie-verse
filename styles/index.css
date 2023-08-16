@@ -40,56 +40,67 @@
     font-size: 12px;
 }
 
+.logoSeparador{
+    height:45px;
+}
+
 .separador{
 
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-image: url(../src/img/backgroun-image/black-and-white-star-1920-x-1200-wallpaper-rbebqq0sgqfbxy3o.jpg);
+    background-size: cover;
     
 }
 
+.titulo {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Special Elite', cursive;
+}
 
 .card-img-top{
     border-radius: 15px;
     
-    
-
 }
 
 
 
-.item{
-    width: 190px;
-    
+.cards{
+   margin-right: 25px;
+    max-width: 250px;
+    text-align: center;
+    max-height: 350px;
+    height: 280px;
 }
 
 
-    .imgCarousel {
-        margin-left:89px;
-    }
+.imgCarousel {
+
+   
+   box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.3);
+   height: 27vh;
+   width: 5vw;
+   max-width: 220px;
+   
+}
+
+
+
     
 
-@media (min-width: 450px) {
+@media (max-width: 450px) {
     .imgCarousel {
-        margin-left:120px;
         
+        margin-left: 80px;
+        width: 60px;
+        height: 220px;
     }
     
 }
 
 
-@media (min-width: 600px) {
-    .imgCarousel {
-        margin-left:200px;
-        
-    }
-    
-}
 
-@media (min-width: 1900px) {
-    .imgCarousel {
-        margin-left:0px;
-        
-    }
     
-}
 
