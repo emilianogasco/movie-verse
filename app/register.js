@@ -66,6 +66,6 @@ if (userAlreadyExist) {
 
 localStorage.setItem('users', JSON.stringify(users));
 
-window.location.href = 'http://127.0.0.1:5501/pages/login.html'
+window.location.href = './pages/login.html'
 
 };
