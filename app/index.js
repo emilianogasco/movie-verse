@@ -137,12 +137,15 @@ const bdpys = [
   },
 ]
 const bdusers=[{
-  
+  name:"admin",
+  lastName:"admin",
+  password:"admin123",
+  email: "admin@admin.com"
 }]
 //cargo la base de datos
 function bdd() {
   localStorage.setItem('PyS', JSON.stringify(bdpys))
-  localStorage.setItem('users', JSON.stringify(bdpys))
+  localStorage.setItem('users', JSON.stringify(bdusers))
 }
 
 // base de datos de peliculas y series
@@ -175,7 +178,7 @@ buscador.addEventListener("input", function() {
     //inserta codigo html en la constante resultado
     if(titulo.includes(resultadoBuscador)) {
         resultado.innerHTML += `<div class="d-flex my-2 align-items-center peliBuscador">
-        <a href="http://127.0.0.1:5501/pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador text-decoration-none text-dark">
+        <a href="./pages/detalle-pelicula.html?id=${id}" class="d-flex my-2 align-items-center peliBuscador text-decoration-none text-dark">
           <img class="w-25 imagenesBuscador" src="${img}" alt="${titulo}">
           <p class="titulosBuscador">${titulo}</p>
         </a>

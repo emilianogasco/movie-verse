@@ -43,7 +43,11 @@ const authUser = (event) => {
      if (authenticatesUser) {
        localStorage.setItem('authUser', JSON.stringify(authenticatesUser));
        alert(`Bienvenido ${authenticatesUser.name}`);
-       window.location.href = 'http://127.0.0.1:5501/index.html';
+       if(authenticatesUser.name === 'admin'){
+           window.location.href = './admin.html';
+       }else{
+        window.location.href = '../index.html';
+        }
        
      } else { 
          alert('Las credenciales no son correctas');
