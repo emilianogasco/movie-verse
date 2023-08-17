@@ -66,6 +66,6 @@ if (userAlreadyExist) {
 
 localStorage.setItem('users', JSON.stringify(users));
 
-window.location.href = './pages/login.html'
+window.location.href = './login.html'
 
 };
